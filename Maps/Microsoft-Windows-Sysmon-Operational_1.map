@@ -6,35 +6,35 @@ Provider: Microsoft-Windows-Sysmon
 Maps:
   -
     Property: UserName
-    PropertyValue: "User:%User%"
+    PropertyValue: "User: %User%"
     Values: 
       - 
         Name: User
         Value: "/Event/EventData/Data[@Name=\"User\"]"
   -
     Property: ExecutableInfo
-    PropertyValue: "ProcessId:%ProcessId%"
+    PropertyValue: "ProcessId: %ProcessId%"
     Values: 
       - 
         Name: ProcessId
         Value: "/Event/EventData/Data[@Name=\"ProcessId\"]"
   -
     Property: PayloadData1
-    PropertyValue: "Image:%Image%"
+    PropertyValue: "Image: %Image%"
     Values: 
       - 
         Name: Image
         Value: "/Event/EventData/Data[@Name=\"Image\"]"
   -
     Property: PayloadData2
-    PropertyValue: "CommandLine:%CommandLine%"
+    PropertyValue: "CommandLine: %CommandLine%"
     Values: 
       - 
         Name: CommandLine
         Value: "/Event/EventData/Data[@Name=\"CommandLine\"]"
   -
     Property: PayloadData3
-    PropertyValue: "Company:%Company% Product:%Product% FileVersion:%FileVersion% Description:%Description%"
+    PropertyValue: "Company: %Company%  Product: %Product%  FileVersion: %FileVersion%  Description: %Description%"
     Values: 
       - 
         Name: Company
@@ -50,14 +50,14 @@ Maps:
         Value: "/Event/EventData/Data[@Name=\"Description\"]"
   -
     Property: PayloadData4
-    PropertyValue: "Hashes:%Hashes%"
+    PropertyValue: "Hashes: %Hashes%"
     Values: 
       - 
         Name: Hashes
         Value: "/Event/EventData/Data[@Name=\"Hashes\"]"
   -
     Property: PayloadData5
-    PropertyValue: "ParentProcessId:%ParentProcessId% ParentImage:%ParentImage% ParentCommandLine:%ParentCommandLine%"
+    PropertyValue: "ParentProcessId: %ParentProcessId%  ParentImage: %ParentImage%  ParentCommandLine: %ParentCommandLine%"
     Values: 
       - 
         Name: ParentProcessId
@@ -70,7 +70,7 @@ Maps:
         Value: "/Event/EventData/Data[@Name=\"ParentCommandLine\"]"
   -
     Property: PayloadData6
-    PropertyValue: "ParentUser:%ParentUser%"
+    PropertyValue: "ParentUser: %ParentUser%"
     Values: 
       - 
         Name: ParentUser

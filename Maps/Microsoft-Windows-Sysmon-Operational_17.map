@@ -6,35 +6,35 @@ Provider: Microsoft-Windows-Sysmon
 Maps:
   -
     Property: UserName
-    PropertyValue: "User:%User%"
+    PropertyValue: "User: %User%"
     Values: 
       - 
         Name: User
         Value: "/Event/EventData/Data[@Name=\"User\"]"
   -
     Property: ExecutableInfo
-    PropertyValue: "ProcessId:%ProcessId%"
+    PropertyValue: "ProcessId: %ProcessId%"
     Values: 
       - 
         Name: ProcessId
         Value: "/Event/EventData/Data[@Name=\"ProcessId\"]"
   -
     Property: PayloadData1
-    PropertyValue: "Image:%Image%"
+    PropertyValue: "Image: %Image%"
     Values: 
       - 
         Name: Image
         Value: "/Event/EventData/Data[@Name=\"Image\"]"
   -
     Property: PayloadData2
-    PropertyValue: "EventType:%EventType%"
+    PropertyValue: "EventType: %EventType%"
     Values: 
       - 
         Name: EventType
         Value: "/Event/EventData/Data[@Name=\"EventType\"]"
   -
     Property: PayloadData3
-    PropertyValue: "PipeName:%PipeName%"
+    PropertyValue: "PipeName: %PipeName%"
     Values: 
       - 
         Name: PipeName

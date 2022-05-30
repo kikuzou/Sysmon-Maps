@@ -6,35 +6,35 @@ Provider: Microsoft-Windows-Sysmon
 Maps:
   -
     Property: UserName
-    PropertyValue: "User:%User%"
+    PropertyValue: "User: %User%"
     Values: 
       - 
         Name: User
         Value: "/Event/EventData/Data[@Name=\"User\"]"
   -
     Property: ExecutableInfo
-    PropertyValue: "ProcessId:%ProcessId%"
+    PropertyValue: "ProcessId: %ProcessId%"
     Values: 
       - 
         Name: ProcessId
         Value: "/Event/EventData/Data[@Name=\"ProcessId\"]"
   -
     Property: PayloadData1
-    PropertyValue: "Image:%Image%"
+    PropertyValue: "Image: %Image%"
     Values: 
       - 
         Name: Image
         Value: "/Event/EventData/Data[@Name=\"Image\"]"
   -
     Property: PayloadData2
-    PropertyValue: "ImageLoaded:%ImageLoaded%"
+    PropertyValue: "ImageLoaded: %ImageLoaded%"
     Values: 
       - 
         Name: ImageLoaded
         Value: "/Event/EventData/Data[@Name=\"ImageLoaded\"]"
   -
     Property: PayloadData3
-    PropertyValue: "Company:%Company% Product:%Product% FileVersion:%FileVersion% Description:%Description%"
+    PropertyValue: "Company: %Company%  Product: %Product%  FileVersion: %FileVersion%  Description: %Description%"
     Values: 
       - 
         Name: Company
@@ -50,14 +50,14 @@ Maps:
         Value: "/Event/EventData/Data[@Name=\"Description\"]"
   -
     Property: PayloadData4
-    PropertyValue: "Hashes:%Hashes%"
+    PropertyValue: "Hashes: %Hashes%"
     Values: 
       - 
         Name: Hashes
         Value: "/Event/EventData/Data[@Name=\"Hashes\"]"
   -
     Property: PayloadData5
-    PropertyValue: "Signed:%Signed% SignatureStatus:%SignatureStatus%"
+    PropertyValue: "Signed: %Signed%  SignatureStatus: %SignatureStatus%"
     Values: 
       - 
         Name: Signed
@@ -67,7 +67,7 @@ Maps:
         Value: "/Event/EventData/Data[@Name=\"SignatureStatus\"]"
   -
     Property: PayloadData6
-    PropertyValue: "Signature:%Signature%"
+    PropertyValue: "Signature: %Signature%"
     Values: 
       - 
         Name: Signature

@@ -6,14 +6,14 @@ Provider: Microsoft-Windows-Sysmon
 Maps:
   -
     Property: PayloadData1
-    PropertyValue: "Configuration:%Configuration%"
+    PropertyValue: "Configuration: %Configuration%"
     Values: 
       - 
         Name: Configuration
         Value: "/Event/EventData/Data[@Name=\"Configuration\"]"
   -
     Property: PayloadData2
-    PropertyValue: "ConfigurationFileHash:%ConfigurationFileHash%"
+    PropertyValue: "ConfigurationFileHash: %ConfigurationFileHash%"
     Values: 
       - 
         Name: ConfigurationFileHash

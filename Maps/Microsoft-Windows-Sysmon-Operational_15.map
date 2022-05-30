@@ -6,49 +6,49 @@ Provider: Microsoft-Windows-Sysmon
 Maps:
   -
     Property: UserName
-    PropertyValue: "User:%User%"
+    PropertyValue: "User: %User%"
     Values: 
       - 
         Name: User
         Value: "/Event/EventData/Data[@Name=\"User\"]"
   -
     Property: ExecutableInfo
-    PropertyValue: "ProcessId:%ProcessId%"
+    PropertyValue: "ProcessId: %ProcessId%"
     Values: 
       - 
         Name: ProcessId
         Value: "/Event/EventData/Data[@Name=\"ProcessId\"]"
   -
     Property: PayloadData1
-    PropertyValue: "Image:%Image%"
+    PropertyValue: "Image: %Image%"
     Values: 
       - 
         Name: Image
         Value: "/Event/EventData/Data[@Name=\"Image\"]"
   -
     Property: PayloadData2
-    PropertyValue: "TargetFilename:%TargetFilename%"
+    PropertyValue: "TargetFilename: %TargetFilename%"
     Values: 
       - 
         Name: TargetFilename
         Value: "/Event/EventData/Data[@Name=\"TargetFilename\"]"
   -
     Property: PayloadData3
-    PropertyValue: "CreationUtcTime:%CreationUtcTime%"
+    PropertyValue: "CreationUtcTime: %CreationUtcTime%"
     Values: 
       - 
         Name: CreationUtcTime
         Value: "/Event/EventData/Data[@Name=\"CreationUtcTime\"]"
   -
     Property: PayloadData4
-    PropertyValue: "Hash:%Hash%"
+    PropertyValue: "Hash: %Hash%"
     Values: 
       - 
         Name: Hash
         Value: "/Event/EventData/Data[@Name=\"Hash\"]"
   -
     Property: PayloadData5
-    PropertyValue: "Contents:%Contents%"
+    PropertyValue: "Contents: %Contents%"
     Values: 
       - 
         Name: Contents

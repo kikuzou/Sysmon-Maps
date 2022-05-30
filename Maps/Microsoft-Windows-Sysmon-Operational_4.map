@@ -6,21 +6,21 @@ Provider: Microsoft-Windows-Sysmon
 Maps:
   -
     Property: PayloadData1
-    PropertyValue: "State:%State%"
+    PropertyValue: "State: %State%"
     Values: 
       - 
         Name: State
         Value: "/Event/EventData/Data[@Name=\"State\"]"
   -
     Property: PayloadData2
-    PropertyValue: "Version:%Version%"
+    PropertyValue: "Version: %Version%"
     Values: 
       - 
         Name: Version
         Value: "/Event/EventData/Data[@Name=\"Version\"]"
   -
     Property: PayloadData3
-    PropertyValue: "SchemaVersion:%SchemaVersion%"
+    PropertyValue: "SchemaVersion: %SchemaVersion%"
     Values: 
       - 
         Name: SchemaVersion
