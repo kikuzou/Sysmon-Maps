@@ -1,0 +1,65 @@
+Author: kikuzou
+Description: CreateRemoteThread detected
+EventId: 8
+Channel: Microsoft-Windows-Sysmon/Operational
+Provider: Microsoft-Windows-Sysmon
+Maps:
+  -
+    Property: UserName
+    PropertyValue: "User:%User%"
+    Values: 
+      - 
+        Name: User
+        Value: "/Event/EventData/Data[@Name=\"SourceUser\"]"
+  -
+    Property: ExecutableInfo
+    PropertyValue: "NewThreadId:%NewThreadId%"
+    Values: 
+      - 
+        Name: NewThreadId
+        Value: "/Event/EventData/Data[@Name=\"NewThreadId\"]"
+  -
+    Property: PayloadData1
+    PropertyValue: "SourceProcessId:%SourceProcessId%"
+    Values: 
+      - 
+        Name: SourceProcessId
+        Value: "/Event/EventData/Data[@Name=\"SourceProcessId\"]"
+  -
+    Property: PayloadData2
+    PropertyValue: "SourceImage:%SourceImage%"
+    Values: 
+      - 
+        Name: SourceImage
+        Value: "/Event/EventData/Data[@Name=\"SourceImage\"]"
+  -
+    Property: PayloadData3
+    PropertyValue: "TargetProcessId:%TargetProcessId%"
+    Values: 
+      - 
+        Name: TargetProcessId
+        Value: "/Event/EventData/Data[@Name=\"TargetProcessId\"]"
+  -
+    Property: PayloadData4
+    PropertyValue: "TargetImage:%TargetImage%"
+    Values: 
+      - 
+        Name: TargetImage
+        Value: "/Event/EventData/Data[@Name=\"TargetImage\"]"
+  -
+    Property: PayloadData5
+    PropertyValue: "StartAddress:%StartAddress%"
+    Values: 
+      - 
+        Name: StartAddress
+        Value: "/Event/EventData/Data[@Name=\"StartAddress\"]"
+  -
+    Property: PayloadData6
+    PropertyValue: "StartModule:%StartModule% StartFunction:%StartFunction%"
+    Values: 
+      - 
+        Name: StartModule
+        Value: "/Event/EventData/Data[@Name=\"StartModule\"]"
+      - 
+        Name: StartFunction
+        Value: "/Event/EventData/Data[@Name=\"StartFunction\"]"

@@ -1,0 +1,74 @@
+Author: kikuzou
+Description: Image loaded
+EventId: 7
+Channel: Microsoft-Windows-Sysmon/Operational
+Provider: Microsoft-Windows-Sysmon
+Maps:
+  -
+    Property: UserName
+    PropertyValue: "User:%User%"
+    Values: 
+      - 
+        Name: User
+        Value: "/Event/EventData/Data[@Name=\"User\"]"
+  -
+    Property: ExecutableInfo
+    PropertyValue: "ProcessId:%ProcessId%"
+    Values: 
+      - 
+        Name: ProcessId
+        Value: "/Event/EventData/Data[@Name=\"ProcessId\"]"
+  -
+    Property: PayloadData1
+    PropertyValue: "Image:%Image%"
+    Values: 
+      - 
+        Name: Image
+        Value: "/Event/EventData/Data[@Name=\"Image\"]"
+  -
+    Property: PayloadData2
+    PropertyValue: "ImageLoaded:%ImageLoaded%"
+    Values: 
+      - 
+        Name: ImageLoaded
+        Value: "/Event/EventData/Data[@Name=\"ImageLoaded\"]"
+  -
+    Property: PayloadData3
+    PropertyValue: "Company:%Company% Product:%Product% FileVersion:%FileVersion% Description:%Description%"
+    Values: 
+      - 
+        Name: Company
+        Value: "/Event/EventData/Data[@Name=\"Company\"]"
+      - 
+        Name: Product
+        Value: "/Event/EventData/Data[@Name=\"Product\"]"
+      - 
+        Name: FileVersion
+        Value: "/Event/EventData/Data[@Name=\"FileVersion\"]"
+      - 
+        Name: Description
+        Value: "/Event/EventData/Data[@Name=\"Description\"]"
+  -
+    Property: PayloadData4
+    PropertyValue: "Hashes:%Hashes%"
+    Values: 
+      - 
+        Name: Hashes
+        Value: "/Event/EventData/Data[@Name=\"Hashes\"]"
+  -
+    Property: PayloadData5
+    PropertyValue: "Signed:%Signed% SignatureStatus:%SignatureStatus%"
+    Values: 
+      - 
+        Name: Signed
+        Value: "/Event/EventData/Data[@Name=\"Signed\"]"
+      - 
+        Name: SignatureStatus
+        Value: "/Event/EventData/Data[@Name=\"SignatureStatus\"]"
+  -
+    Property: PayloadData6
+    PropertyValue: "Signature:%Signature%"
+    Values: 
+      - 
+        Name: Signature
+        Value: "/Event/EventData/Data[@Name=\"Signature\"]"

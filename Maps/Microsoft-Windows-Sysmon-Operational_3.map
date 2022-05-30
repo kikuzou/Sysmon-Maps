@@ -1,0 +1,70 @@
+Author: kikuzou
+Description: Network connection detected
+EventId: 3
+Channel: Microsoft-Windows-Sysmon/Operational
+Provider: Microsoft-Windows-Sysmon
+Maps:
+  -
+    Property: UserName
+    PropertyValue: "User:%User%"
+    Values: 
+      - 
+        Name: User
+        Value: "/Event/EventData/Data[@Name=\"User\"]"
+  -
+    Property: ExecutableInfo
+    PropertyValue: "ProcessId:%ProcessId%"
+    Values: 
+      - 
+        Name: ProcessId
+        Value: "/Event/EventData/Data[@Name=\"ProcessId\"]"
+  -
+    Property: RemoteHost
+    PropertyValue: "DestinationHostname:%DestinationHostname%"
+    Values: 
+      - 
+        Name: DestinationHostname
+        Value: "/Event/EventData/Data[@Name=\"DestinationHostname\"]"
+  -
+    Property: PayloadData1
+    PropertyValue: "Image:%Image%"
+    Values: 
+      - 
+        Name: Image
+        Value: "/Event/EventData/Data[@Name=\"Image\"]"
+  -
+    Property: PayloadData2
+    PropertyValue: "Protocol:%Protocol%"
+    Values: 
+      - 
+        Name: Protocol
+        Value: "/Event/EventData/Data[@Name=\"Protocol\"]"
+  -
+    Property: PayloadData3
+    PropertyValue: "SourceIp:%SourceIp%"
+    Values: 
+      - 
+        Name: SourceIp
+        Value: "/Event/EventData/Data[@Name=\"SourceIp\"]"
+  -
+    Property: PayloadData4
+    PropertyValue: "SourcePort:%SourcePort%"
+    Values: 
+      - 
+        Name: SourcePort
+        Value: "/Event/EventData/Data[@Name=\"SourcePort\"]"
+  -
+    Property: PayloadData5
+    PropertyValue: "DestinationIp:%DestinationIp%"
+    Values: 
+      - 
+        Name: DestinationIp
+        Value: "/Event/EventData/Data[@Name=\"DestinationIp\"]"
+  -
+    Property: PayloadData6
+    PropertyValue: "DestinationPort:%DestinationPort%"
+    Values: 
+      - 
+        Name: DestinationPort
+        Value: "/Event/EventData/Data[@Name=\"DestinationPort\"]"
+  

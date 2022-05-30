@@ -1,0 +1,48 @@
+Author: kikuzou
+Description: Dns query
+EventId: 22
+Channel: Microsoft-Windows-Sysmon/Operational
+Provider: Microsoft-Windows-Sysmon
+Maps:
+  -
+    Property: UserName
+    PropertyValue: "User:%User%"
+    Values: 
+      - 
+        Name: User
+        Value: "/Event/EventData/Data[@Name=\"User\"]"
+  -
+    Property: ExecutableInfo
+    PropertyValue: "ProcessId:%ProcessId%"
+    Values: 
+      - 
+        Name: ProcessId
+        Value: "/Event/EventData/Data[@Name=\"ProcessId\"]"
+  -
+    Property: PayloadData1
+    PropertyValue: "Image:%Image%"
+    Values: 
+      - 
+        Name: Image
+        Value: "/Event/EventData/Data[@Name=\"Image\"]"
+  -
+    Property: PayloadData2
+    PropertyValue: "QueryName:%QueryName%"
+    Values: 
+      - 
+        Name: QueryName
+        Value: "/Event/EventData/Data[@Name=\"QueryName\"]"
+  -
+    Property: PayloadData3
+    PropertyValue: "QueryStatus:%QueryStatus%"
+    Values: 
+      - 
+        Name: QueryStatus
+        Value: "/Event/EventData/Data[@Name=\"QueryStatus\"]"
+  -
+    Property: PayloadData4
+    PropertyValue: "QueryResults:%QueryResults%"
+    Values: 
+      - 
+        Name: QueryResults
+        Value: "/Event/EventData/Data[@Name=\"QueryResults\"]"

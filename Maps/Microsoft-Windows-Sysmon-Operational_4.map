@@ -1,0 +1,27 @@
+Author: kikuzou
+Description: Sysmon service state changed
+EventId: 4
+Channel: Microsoft-Windows-Sysmon/Operational
+Provider: Microsoft-Windows-Sysmon
+Maps:
+  -
+    Property: PayloadData1
+    PropertyValue: "State:%State%"
+    Values: 
+      - 
+        Name: State
+        Value: "/Event/EventData/Data[@Name=\"State\"]"
+  -
+    Property: PayloadData2
+    PropertyValue: "Version:%Version%"
+    Values: 
+      - 
+        Name: Version
+        Value: "/Event/EventData/Data[@Name=\"Version\"]"
+  -
+    Property: PayloadData3
+    PropertyValue: "SchemaVersion:%SchemaVersion%"
+    Values: 
+      - 
+        Name: SchemaVersion
+        Value: "/Event/EventData/Data[@Name=\"SchemaVersion\"]"

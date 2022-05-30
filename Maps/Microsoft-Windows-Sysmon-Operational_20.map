@@ -1,0 +1,49 @@
+Author: kikuzou
+Description: WmiEventConsumer activity detected
+EventId: 20
+Channel: Microsoft-Windows-Sysmon/Operational
+Provider: Microsoft-Windows-Sysmon
+Maps:
+  -
+    Property: UserName
+    PropertyValue: "User:%User%"
+    Values: 
+      - 
+        Name: User
+        Value: "/Event/EventData/Data[@Name=\"User\"]"
+  -
+    Property: PayloadData1
+    PropertyValue: "EventType:%EventType%"
+    Values: 
+      - 
+        Name: EventType
+        Value: "/Event/EventData/Data[@Name=\"EventType\"]"
+  -
+    Property: PayloadData2
+    PropertyValue: "Operation:%Operation%"
+    Values: 
+      - 
+        Name: Operation
+        Value: "/Event/EventData/Data[@Name=\"Operation\"]"
+  -
+    Property: PayloadData3
+    PropertyValue: "Name:%Name%"
+    Values: 
+      - 
+        Name: Name
+        Value: "/Event/EventData/Data[@Name=\"Name\"]"
+  -
+    Property: PayloadData4
+    PropertyValue: "Type:%Type%"
+    Values: 
+      - 
+        Name: Type
+        Value: "/Event/EventData/Data[@Name=\"Type\"]"
+  -
+    Property: PayloadData5
+    PropertyValue: "Destination:%Destination%"
+    Values: 
+      - 
+        Name: Destination
+        Value: "/Event/EventData/Data[@Name=\"Destination\"]"
+

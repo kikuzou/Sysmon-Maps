@@ -1,0 +1,20 @@
+Author: kikuzou
+Description: Sysmon config state changed
+EventId: 16
+Channel: Microsoft-Windows-Sysmon/Operational
+Provider: Microsoft-Windows-Sysmon
+Maps:
+  -
+    Property: PayloadData1
+    PropertyValue: "Configuration:%Configuration%"
+    Values: 
+      - 
+        Name: Configuration
+        Value: "/Event/EventData/Data[@Name=\"Configuration\"]"
+  -
+    Property: PayloadData2
+    PropertyValue: "ConfigurationFileHash:%ConfigurationFileHash%"
+    Values: 
+      - 
+        Name: ConfigurationFileHash
+        Value: "/Event/EventData/Data[@Name=\"ConfigurationFileHash\"]"

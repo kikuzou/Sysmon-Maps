@@ -1,0 +1,55 @@
+Author: kikuzou
+Description: Clipboard changed
+EventId: 24
+Channel: Microsoft-Windows-Sysmon/Operational
+Provider: Microsoft-Windows-Sysmon
+Maps:
+  -
+    Property: UserName
+    PropertyValue: "User:%User%"
+    Values: 
+      - 
+        Name: User
+        Value: "/Event/EventData/Data[@Name=\"User\"]"
+  -
+    Property: ExecutableInfo
+    PropertyValue: "ProcessId:%ProcessId%"
+    Values: 
+      - 
+        Name: ProcessId
+        Value: "/Event/EventData/Data[@Name=\"ProcessId\"]"
+  -
+    Property: PayloadData1
+    PropertyValue: "Image:%Image%"
+    Values: 
+      - 
+        Name: Image
+        Value: "/Event/EventData/Data[@Name=\"Image\"]"
+  -
+    Property: PayloadData2
+    PropertyValue: "Session:%Session%"
+    Values: 
+      - 
+        Name: Session
+        Value: "/Event/EventData/Data[@Name=\"Session\"]"
+  -
+    Property: PayloadData3
+    PropertyValue: "ClientInfo:%ClientInfo%"
+    Values: 
+      - 
+        Name: ClientInfo
+        Value: "/Event/EventData/Data[@Name=\"ClientInfo\"]"
+  -
+    Property: PayloadData4
+    PropertyValue: "Hashes:%Hashes%"
+    Values: 
+      - 
+        Name: Hashes
+        Value: "/Event/EventData/Data[@Name=\"Hashes\"]"
+  -
+    Property: PayloadData5
+    PropertyValue: "Archived:%Archived%"
+    Values: 
+      - 
+        Name: Archived
+        Value: "/Event/EventData/Data[@Name=\"Archived\"]"

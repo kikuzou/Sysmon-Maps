@@ -1,0 +1,56 @@
+Author: kikuzou
+Description: File Delete archived
+EventId: 23
+Channel: Microsoft-Windows-Sysmon/Operational
+Provider: Microsoft-Windows-Sysmon
+Maps:
+  -
+    Property: UserName
+    PropertyValue: "User:%User%"
+    Values: 
+      - 
+        Name: User
+        Value: "/Event/EventData/Data[@Name=\"User\"]"
+  -
+    Property: ExecutableInfo
+    PropertyValue: "ProcessId:%ProcessId%"
+    Values: 
+      - 
+        Name: ProcessId
+        Value: "/Event/EventData/Data[@Name=\"ProcessId\"]"
+  -
+    Property: PayloadData1
+    PropertyValue: "Image:%Image%"
+    Values: 
+      - 
+        Name: Image
+        Value: "/Event/EventData/Data[@Name=\"Image\"]"
+  -
+    Property: PayloadData2
+    PropertyValue: "TargetFilename:%TargetFilename%"
+    Values: 
+      - 
+        Name: TargetFilename
+        Value: "/Event/EventData/Data[@Name=\"TargetFilename\"]"
+  -
+    Property: PayloadData3
+    PropertyValue: "IsExecutable:%IsExecutable%"
+    Values: 
+      - 
+        Name: IsExecutable
+        Value: "/Event/EventData/Data[@Name=\"IsExecutable\"]"
+  -
+    Property: PayloadData4
+    PropertyValue: "Hashes:%Hashes%"
+    Values: 
+      - 
+        Name: Hashes
+        Value: "/Event/EventData/Data[@Name=\"Hashes\"]"
+  -
+    Property: PayloadData5
+    PropertyValue: "Archived:%Archived%"
+    Values: 
+      - 
+        Name: Archived
+        Value: "/Event/EventData/Data[@Name=\"Archived\"]"
+

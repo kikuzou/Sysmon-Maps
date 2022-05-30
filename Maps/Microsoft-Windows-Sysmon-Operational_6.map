@@ -1,0 +1,41 @@
+Author: kikuzou
+Description: Driver loaded
+EventId: 6
+Channel: Microsoft-Windows-Sysmon/Operational
+Provider: Microsoft-Windows-Sysmon
+Maps:
+  -
+    Property: PayloadData1
+    PropertyValue: "ImageLoaded:%ImageLoaded%"
+    Values: 
+      - 
+        Name: ImageLoaded
+        Value: "/Event/EventData/Data[@Name=\"ImageLoaded\"]"
+  -
+    Property: PayloadData2
+    PropertyValue: "Hashes:%Hashes%"
+    Values: 
+      - 
+        Name: Hashes
+        Value: "/Event/EventData/Data[@Name=\"Hashes\"]"
+  -
+    Property: PayloadData3
+    PropertyValue: "Signed:%Signed%"
+    Values: 
+      - 
+        Name: Signed
+        Value: "/Event/EventData/Data[@Name=\"Signed\"]"
+  -
+    Property: PayloadData4
+    PropertyValue: "Signature:%Signature%"
+    Values: 
+      - 
+        Name: Signature
+        Value: "/Event/EventData/Data[@Name=\"Signature\"]"
+  -
+    Property: PayloadData5
+    PropertyValue: "SignatureStatus:%SignatureStatus%"
+    Values: 
+      - 
+        Name: SignatureStatus
+        Value: "/Event/EventData/Data[@Name=\"SignatureStatus\"]"

@@ -1,0 +1,41 @@
+Author: kikuzou
+Description: Pipe Created
+EventId: 17
+Channel: Microsoft-Windows-Sysmon/Operational
+Provider: Microsoft-Windows-Sysmon
+Maps:
+  -
+    Property: UserName
+    PropertyValue: "User:%User%"
+    Values: 
+      - 
+        Name: User
+        Value: "/Event/EventData/Data[@Name=\"User\"]"
+  -
+    Property: ExecutableInfo
+    PropertyValue: "ProcessId:%ProcessId%"
+    Values: 
+      - 
+        Name: ProcessId
+        Value: "/Event/EventData/Data[@Name=\"ProcessId\"]"
+  -
+    Property: PayloadData1
+    PropertyValue: "Image:%Image%"
+    Values: 
+      - 
+        Name: Image
+        Value: "/Event/EventData/Data[@Name=\"Image\"]"
+  -
+    Property: PayloadData2
+    PropertyValue: "EventType:%EventType%"
+    Values: 
+      - 
+        Name: EventType
+        Value: "/Event/EventData/Data[@Name=\"EventType\"]"
+  -
+    Property: PayloadData3
+    PropertyValue: "PipeName:%PipeName%"
+    Values: 
+      - 
+        Name: PipeName
+        Value: "/Event/EventData/Data[@Name=\"PipeName\"]"

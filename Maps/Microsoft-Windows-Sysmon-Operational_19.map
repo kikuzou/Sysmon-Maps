@@ -1,0 +1,48 @@
+Author: kikuzou
+Description: WmiEventFilter activity detected
+EventId: 19
+Channel: Microsoft-Windows-Sysmon/Operational
+Provider: Microsoft-Windows-Sysmon
+Maps:
+  -
+    Property: UserName
+    PropertyValue: "User:%User%"
+    Values: 
+      - 
+        Name: User
+        Value: "/Event/EventData/Data[@Name=\"User\"]"
+  -
+    Property: PayloadData1
+    PropertyValue: "EventType:%EventType%"
+    Values: 
+      - 
+        Name: EventType
+        Value: "/Event/EventData/Data[@Name=\"EventType\"]"
+  -
+    Property: PayloadData2
+    PropertyValue: "Operation:%Operation%"
+    Values: 
+      - 
+        Name: Operation
+        Value: "/Event/EventData/Data[@Name=\"Operation\"]"
+  -
+    Property: PayloadData3
+    PropertyValue: "Name:%Name%"
+    Values: 
+      - 
+        Name: Name
+        Value: "/Event/EventData/Data[@Name=\"Name\"]"
+  -
+    Property: PayloadData4
+    PropertyValue: "EventNamespace:%EventNamespace%"
+    Values: 
+      - 
+        Name: EventNamespace
+        Value: "/Event/EventData/Data[@Name=\"EventNamespace\"]"
+  -
+    Property: PayloadData5
+    PropertyValue: "Query:%Query%"
+    Values: 
+      - 
+        Name: Query
+        Value: "/Event/EventData/Data[@Name=\"Query\"]"

@@ -1,0 +1,58 @@
+Author: kikuzou
+Description: Process accessed
+EventId: 10
+Channel: Microsoft-Windows-Sysmon/Operational
+Provider: Microsoft-Windows-Sysmon
+Maps:
+  -
+    Property: UserName
+    PropertyValue: "User:%User%"
+    Values: 
+      - 
+        Name: User
+        Value: "/Event/EventData/Data[@Name=\"SourceUser\"]"
+  -
+    Property: PayloadData1
+    PropertyValue: "SourceImage:%SourceImage%"
+    Values: 
+      - 
+        Name: SourceImage
+        Value: "/Event/EventData/Data[@Name=\"SourceImage\"]"
+  -
+    Property: PayloadData2
+    PropertyValue: "SourceProcessId:%SourceProcessId%"
+    Values: 
+      - 
+        Name: SourceProcessId
+        Value: "/Event/EventData/Data[@Name=\"SourceProcessId\"]"
+  -
+    Property: PayloadData3
+    PropertyValue: "SourceThreadId:%SourceThreadId%"
+    Values: 
+      - 
+        Name: SourceThreadId
+        Value: "/Event/EventData/Data[@Name=\"SourceThreadId\"]"
+  -
+    Property: PayloadData4
+    PropertyValue: "TargetImage:%TargetImage%"
+    Values: 
+      - 
+        Name: TargetImage
+        Value: "/Event/EventData/Data[@Name=\"TargetImage\"]"
+  -
+    Property: PayloadData5
+    PropertyValue: "TargetProcessId:%TargetProcessId%"
+    Values: 
+      - 
+        Name: TargetProcessId
+        Value: "/Event/EventData/Data[@Name=\"TargetProcessId\"]"
+  -
+    Property: PayloadData6
+    PropertyValue: "GrantedAccess:%GrantedAccess% CallTrace:%CallTrace%"
+    Values: 
+      - 
+        Name: GrantedAccess
+        Value: "/Event/EventData/Data[@Name=\"GrantedAccess\"]"
+      - 
+        Name: CallTrace
+        Value: "/Event/EventData/Data[@Name=\"CallTrace\"]"

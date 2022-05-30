@@ -1,0 +1,48 @@
+Author: kikuzou
+Description: Registry value set
+EventId: 13
+Channel: Microsoft-Windows-Sysmon/Operational
+Provider: Microsoft-Windows-Sysmon
+Maps:
+  -
+    Property: UserName
+    PropertyValue: "User:%User%"
+    Values: 
+      - 
+        Name: User
+        Value: "/Event/EventData/Data[@Name=\"User\"]"
+  -
+    Property: ExecutableInfo
+    PropertyValue: "ProcessId:%ProcessId%"
+    Values: 
+      - 
+        Name: ProcessId
+        Value: "/Event/EventData/Data[@Name=\"ProcessId\"]"
+  -
+    Property: PayloadData1
+    PropertyValue: "Image:%Image%"
+    Values: 
+      - 
+        Name: Image
+        Value: "/Event/EventData/Data[@Name=\"Image\"]"
+  -
+    Property: PayloadData2
+    PropertyValue: "EventType:%EventType%"
+    Values: 
+      - 
+        Name: EventType
+        Value: "/Event/EventData/Data[@Name=\"EventType\"]"
+  -
+    Property: PayloadData3
+    PropertyValue: "TargetObject:%TargetObject%"
+    Values: 
+      - 
+        Name: TargetObject
+        Value: "/Event/EventData/Data[@Name=\"TargetObject\"]"
+  -
+    Property: PayloadData4
+    PropertyValue: "Details:%Details%"
+    Values: 
+      - 
+        Name: Details
+        Value: "/Event/EventData/Data[@Name=\"Details\"]"
